@@ -1,1 +1,37 @@
 GET http://localhost:3003
+
+###
+POST http://localhost:3003/studant/create
+Content-Type: application/json
+
+{
+    "nome":"Daniel Sacramento",
+    "email":"daniel@gmail.com",
+    "data_nasc":"2000-04-15",
+    "turma_id": 3,
+    "nomePassatempo":"codar nas madrugadas portuguesas"
+    
+}
+
+####
+POST http://localhost:3003/class/create
+Content-Type: application/json
+
+{
+    "nome":"Turma IPA",
+    "data_inicio":"2021-10-15",
+    "data_final":"2022-04-23",
+    "modulo":"0"
+}
+
+###
+POST http://localhost:3003/teacher/create
+Content-Type: application/json
+
+{
+    "nome":"João",
+    "email":"joao@gmail.com",
+    "data_nasc":"1999-04-15",
+    "turma_id": 3,
+    "nomeEspecialidades":"backend"
+}
