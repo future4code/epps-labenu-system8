@@ -1,4 +1,4 @@
-import { connection } from '../../connection'
+import { connection } from '../../../connection'
 import { Request, Response } from 'express'
 
 const createStudant = async (
@@ -13,12 +13,12 @@ const createStudant = async (
                 "${req.body.nome}",
                 "${req.body.email}",
                 "${req.body.data_nasc}",
-                "${req.body.turma_id}"                
+                ${req.body.turma_id}                
             )`)
             
             await connection.raw(
                 `
-                INSERT INTO Passatempo(nome)
+                INSERT INTO Passatempo (nome)
                 VALUES(
                     "${req.body.nomePassatempo}"
                 )

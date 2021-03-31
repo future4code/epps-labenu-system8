@@ -1,7 +1,7 @@
-import { connection } from '../../connection'
+import { connection } from '../../../connection'
 import { Request, Response } from 'express'
-import { Especialidades } from '../../TypesAndEnums/Enums'
-import { Docentes } from '../../TypesAndEnums/Types'
+import { Especialidades } from '../../../TypesAndEnums/Enums'
+import { Docentes } from '../../../TypesAndEnums/Types'
 
 const createTeacher = async (
     req: Request,
