@@ -1,4 +1,4 @@
-import { Especialidades } from './Enums'
+import { Especialidades, Type } from './Enums'
 
 export type  Docentes = {
     nome:string,
@@ -6,4 +6,10 @@ export type  Docentes = {
     data_nasc:string,
     turma_id:number,
     especialidade:Especialidades
+}
+
+export type updateClass = {
+    tableName: Type,
+    peapleClassId: number,
+    peapleNewClassId: number
 }

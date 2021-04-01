@@ -9,3 +9,8 @@ export enum Especialidades{
     BACKEND="backend"
 
 }
+
+export enum Type{
+    DOCENTE = "Docentes",
+    ESTUDANTE = "Estudantes"
+}
