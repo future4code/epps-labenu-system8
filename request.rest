@@ -5,10 +5,10 @@ POST http://localhost:3003/student/create
 Content-Type: application/json
 
 {
-    "name":"Ju",
-    "email":"juliene@gmail.com",
-    "birthdate":"2000-04-15",
-    "hobbies": "Dormir."
+    "name":"Amigo do Daniel",
+    "email":"Amigodaniel@gmail.com",
+    "birthdate":"1953-07-21",
+    "hobbies": "Codar com o daniel e ver o cr7."
 }
 
 ####
@@ -16,9 +16,9 @@ POST http://localhost:3003/class/create
 Content-Type: application/json
 
 {
-    "name":"Turma Ana da Hora",
-    "start_date":"2021-07-01",
-    "end_date":"2022-01-01",
+    "name":"Turma IPA",
+    "start_date":"2021-06-01",
+    "end_date":"2022-12-01",
     "type_class": "Integral"
 }
 
@@ -27,10 +27,10 @@ POST http://localhost:3003/teacher/create
 Content-Type: application/json
 
 {
-    "name":"Caio",
-    "email":"caio@gmail.com",
-    "birthdate":"1990-04-15",
-    "speciality": "Redux"
+    "name":"João",
+    "email":"joao@gmail.com",
+    "birthdate":"1996-04-15",
+    "speciality": "Backend"
 }
 
 ### 
@@ -38,7 +38,10 @@ PUT http://localhost:3003/update/class
 Content-Type: application/json
 
 {
-    "tableName": "Teachers",
-    "peapleClassId": "1617296352730",
-    "peapleNewClassId": "1617299457911"
+    "tableName": "Students",
+    "peapleClassId": "1617303114836",
+    "peapleNewClassId": "1617303186439"
 }
+
+###
+GET http://localhost:3003/students/1617303214106
