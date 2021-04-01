@@ -10,6 +10,6 @@ export type  Docentes = {
 
 export type updateClass = {
     tableName: Type,
-    peapleClassId: number,
-    peapleNewClassId: number
+    peapleClassId: string,
+    peapleNewClassId: string
 }

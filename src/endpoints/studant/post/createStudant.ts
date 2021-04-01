@@ -6,29 +6,29 @@ const createStudant = async (
     res: Response
 ): Promise<void> => {
     try {
+
+        let classId = 0
+        if(!req.body.class_id){
+            classId = 1
+        } else {
+            classId = Number(req.body.class_id)
+        }
+
         await connection.raw(
             `
-            INSERT INTO Estudantes (nome, email, data_nasc, turma_id)
+            INSERT INTO Students (id, name, email, birthdate, hobbies)
             VALUES(
-                "${req.body.nome}",
+                "${Date.now()}",
+                "${req.body.name}",
                 "${req.body.email}",
-                "${req.body.data_nasc}",
-                ${req.body.turma_id}                
+                "${req.body.birthdate}",
+                "${req.body.hobbies}"                 
             )`)
-            
-            await connection.raw(
-                `
-                INSERT INTO Passatempo (nome)
-                VALUES(
-                    "${req.body.nomePassatempo}"
-                )
-                `
-            )
 
         res.status(201).send('Estudante criado com sucesso!')
         
     } catch (error) {
-        res.status(500).send("Todos os campos devem ser preenchidos")
+        res.status(500).send(error.message)
     }
 }
 

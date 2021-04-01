@@ -1,15 +1,14 @@
 GET http://localhost:3003
 
 ###
-POST http://localhost:3003/studant/create
+POST http://localhost:3003/student/create
 Content-Type: application/json
 
 {
-    "nome":"Daniel Sacramento",
-    "email":"daniel@gmail.com",
-    "data_nasc":"2000-04-15",
-    "turma_id": 1,
-    "nomePassatempo":"codar nas madrugadas portuguesas"
+    "name":"Ju",
+    "email":"juliene@gmail.com",
+    "birthdate":"2000-04-15",
+    "hobbies": "Dormir."
 }
 
 ####
@@ -17,10 +16,10 @@ POST http://localhost:3003/class/create
 Content-Type: application/json
 
 {
-    "nome":"Turma Neil Tyson",
-    "data_inicio":"2021-05-01",
-    "data_final":"2022-11-01",
-    "modulo": 0
+    "name":"Turma Ana da Hora",
+    "start_date":"2021-07-01",
+    "end_date":"2022-01-01",
+    "type_class": "Integral"
 }
 
 ###
@@ -28,11 +27,10 @@ POST http://localhost:3003/teacher/create
 Content-Type: application/json
 
 {
-    "nome":"João",
-    "email":"joao@gmail.com",
-    "data_nasc":"1999-04-15",
-    "turma_id": 3,
-    "nomeEspecialidades":"backend"
+    "name":"Caio",
+    "email":"caio@gmail.com",
+    "birthdate":"1990-04-15",
+    "speciality": "Redux"
 }
 
 ### 
@@ -40,7 +38,7 @@ PUT http://localhost:3003/update/class
 Content-Type: application/json
 
 {
-    "tableName": "Estudantes",
-    "peapleClassId": 1,
-    "peapleNewClassId": 2
+    "tableName": "Teachers",
+    "peapleClassId": "1617296352730",
+    "peapleNewClassId": "1617299457911"
 }

@@ -8,11 +8,13 @@ const changeClass = async (req: Request,
         let errorCode: number = 400
         const body: updateClass = {
             tableName: req.body.tableName,
-            peapleClassId: Number(req.body.peapleClassId),
-            peapleNewClassId: Number(req.body.peapleNewClassId)
+            peapleClassId: req.body.peapleClassId,
+            peapleNewClassId: req.body.peapleNewClassId
         }
 
-        if(body.tableName !== 'Docentes' && body.tableName !== 'Estudantes'){
+        //verificar se estudante existe
+
+        if(body.tableName !== 'Teachers' && body.tableName !== 'Students'){
             errorCode = 422
             throw new Error('tableName dont exist.')
         } else if (!body.peapleClassId) {
