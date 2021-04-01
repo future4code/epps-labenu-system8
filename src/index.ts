@@ -3,7 +3,10 @@ import createClass from './endpoints/class/post/createClass'
 import createStudant from './endpoints/studant/post/createStudant'
 import createTeacher from './endpoints/teacher/post/createTeacher'
 import changeClass from './endpoints/class/put/changeClass'
+import getStudantsByClass from './endpoints/studant/get/getStudantsByClass'
 
+
+app.get('/students/:id', getStudantsByClass)
 app.post ('/class/create', createClass)
 app.post('/student/create', createStudant)
 app.post ('/teacher/create', createTeacher)
