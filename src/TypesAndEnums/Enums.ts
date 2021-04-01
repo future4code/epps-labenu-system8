@@ -11,6 +11,6 @@ export enum Especialidades{
 }
 
 export enum Type{
-    DOCENTE = "Docentes",
-    ESTUDANTE = "Estudantes"
+    TEACHER = "Teachers",
+    STUDENT = "Students"
 }

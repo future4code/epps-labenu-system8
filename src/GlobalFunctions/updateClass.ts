@@ -1,10 +1,10 @@
 import {connection} from '../connection'
 
-const updateClassStudant = async (classId: number, newClassId: number, tableName: string) =>{
+const updateClassStudant = async (classId: string, newClassId: string, tableName: string) =>{
     await connection.raw(`
         UPDATE ${tableName}
-        SET turma_id = ${newClassId}
-        WHERE turma_id = ${classId};
+        SET class_id = "${newClassId}"
+        WHERE id = "${classId}";
     `)
 }
 export default updateClassStudant;
