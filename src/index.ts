@@ -8,6 +8,7 @@ import getStudentAge from './endpoints/both/getAge'
 import getTeacherByClass from './endpoints/teacher/get/getTeacherByClass'
 import getStudentsByHobbies from './endpoints/studant/get/getStudentsByHobbies'
 import removeStudentFromClass from './endpoints/studant/delete/removeStudentsFromClass'
+import removeStudent from './endpoints/studant/delete/removeStudent'
 
 app.get('/students/hobbies', getStudentsByHobbies)
 app.get('/search/age', getStudentAge)
@@ -18,3 +19,4 @@ app.post('/student/create', createStudant)
 app.post ('/teacher/create', createTeacher)
 app.put('/update/class', changeClass)
 app.put('/student/remove-class/:id', removeStudentFromClass)
+app.delete('/student/remove/:id', removeStudent)
