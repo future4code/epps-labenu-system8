@@ -25,10 +25,10 @@ POST http://localhost:3003/teacher/create
 Content-Type: application/json
 
 {
-    "name":"João",
-    "email":"joao@gmail.com",
-    "birthdate":"1996-04-15",
-    "speciality": "Backend"
+    "name":"Caio",
+    "email":"Caio@gmail.com",
+    "birthdate":"1950-04-15",
+    "speciality": "React"
 }
 
 ### 
@@ -54,7 +54,13 @@ GET http://localhost:3003/search/age?id=1617546212494&&tableName=teachers
 GET http://localhost:3003/students/hobbies
 
 ###
-PUT http://localhost:3003/student/remove-class/:id
+DELETE http://localhost:3003/student/remove-class/:id
+
+###
+DELETE http://localhost:3003/teacher/remove-class/:id
+
+###
+PUT http://localhost:3003/class/change-module?id=1617547014022&&module=1
 
 ###
 DELETE http://localhost:3003/student/remove/1617312546437
