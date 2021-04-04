@@ -26,3 +26,11 @@ export type student = {
     hobbies: string,
     birthdate: string
 }
+
+export type teacher = {
+    id: string,
+    teachers_name: string,
+    email: string,
+    speciality: string,
+    birthdate: string
+}
