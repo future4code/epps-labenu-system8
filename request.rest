@@ -38,13 +38,16 @@ PUT http://localhost:3003/update/class
 Content-Type: application/json
 
 {
-    "tableName": "Students",
-    "peapleClassId": "1617303114836",
-    "peapleNewClassId": "1617303186439"
+    "tableName": "Teachers",
+    "peapleClassId": "1617546212494",
+    "peapleNewClassId": "1617547014022"
 }
 
 ###
 GET http://localhost:3003/students/1617547014022
+
+###
+GET http://localhost:3003/teachers/1617547014022
 
 ###
 GET http://localhost:3003/search/age?id=1617546212494&&tableName=teachers
