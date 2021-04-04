@@ -2,21 +2,16 @@ import { connection } from "../../../connection";
 import { Request, Response } from 'express'
 import { convertDate } from "../../../GlobalFunctions/aboutDate/convertDate";
 import { student } from "../../../TypesAndEnums/Types";
+import { notFound } from "../../../GlobalFunctions/error/notFound";
 
-const getStudantsByClass = async (req: Request, res: Response): Promise<void> => {
+const getStudentsByHobbies = async (req: Request, res: Response): Promise<void> => {
 
   try {
     const QueryResult = await connection.raw(`
-        SELECT 
-          C.class_name,
-          S.id, 
-          S.student_name,
-          S.email,
-          S.birthdate,
-          S.hobbies
-        FROM Students S
-        JOIN Class C
-        ON S.class_id = "${req.params.id}"
+        SELECT * FROM Students WHERE hobbies IN (
+            SELECT hobbies FROM Students
+            GROUP BY hobbies HAVING COUNT(*) > 1
+        );      
     `)
 
     const students = QueryResult[0].map((student: student) => {
@@ -29,9 +24,10 @@ const getStudantsByClass = async (req: Request, res: Response): Promise<void> =>
       })
     })
 
+    notFound(students)
+
     res.status(200).send({
-      className: QueryResult[0][0].class_name,
-      student: students
+      students: students
     })
 
   }
@@ -40,4 +36,4 @@ const getStudantsByClass = async (req: Request, res: Response): Promise<void> =>
   }
 }
 
-export default getStudantsByClass
+export default getStudentsByHobbies

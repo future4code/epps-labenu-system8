@@ -6,7 +6,9 @@ import changeClass from './endpoints/class/put/changeClass'
 import getStudantsByClass from './endpoints/studant/get/getStudantsByClass'
 import getStudentAge from './endpoints/both/getAge'
 import getTeacherByClass from './endpoints/teacher/get/getTeacherByClass'
+import getStudentsByHobbies from './endpoints/studant/get/getStudentsByHobbies'
 
+app.get('/students/hobbies', getStudentsByHobbies)
 app.get('/search/age', getStudentAge)
 app.get('/students/:id', getStudantsByClass)
 app.get('/teachers/:id', getTeacherByClass)
