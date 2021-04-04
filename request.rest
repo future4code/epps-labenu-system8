@@ -52,3 +52,6 @@ GET http://localhost:3003/search/age?id=1617546212494&&tableName=teachers
 
 ###
 GET http://localhost:3003/students/hobbies
+
+###
+PUT http://localhost:3003/student/remove-class/:id
