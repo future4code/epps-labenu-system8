@@ -16,7 +16,7 @@ const createStudant = async (
 
         await connection.raw(
             `
-            INSERT INTO Students (id, name, email, birthdate, hobbies)
+            INSERT INTO Students (id, student_name, email, birthdate, hobbies)
             VALUES(
                 "${Date.now()}",
                 "${req.body.name}",

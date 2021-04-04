@@ -11,7 +11,7 @@ const createTeacher = async (
 
         await connection.raw(
             `
-            INSERT INTO Teachers (id, name, email, birthdate, speciality)
+            INSERT INTO Teachers (id, teacher_name, email, birthdate, speciality)
             VALUES(
                 "${Date.now()}",
                 "${req.body.name}",
