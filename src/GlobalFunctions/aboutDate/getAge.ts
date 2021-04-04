@@ -6,10 +6,10 @@ import { timestampToYear } from './timestampToYear'
 
 // pegando idade da pessoa
 
-export const getAge = async (idUser: string) => {
+export const getAge = async (idUser: string, tableName: string) => {
     const birthdate = await connection.raw(`
     SELECT birthdate
-    FROM Students
+    FROM ${tableName}
     WHERE id = "${idUser}"
     `)
 

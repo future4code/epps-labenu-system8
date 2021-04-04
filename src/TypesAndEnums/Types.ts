@@ -13,3 +13,8 @@ export type updateClass = {
     peapleClassId: string,
     peapleNewClassId: string
 }
+
+export type data = {
+    id: string,
+    tableName: string
+}
