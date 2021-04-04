@@ -18,3 +18,11 @@ export type data = {
     id: string,
     tableName: string
 }
+
+export type student = {
+    id: string,
+    student_name: string,
+    email: string,
+    hobbies: string,
+    birthdate: string
+}
