@@ -34,7 +34,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🚀 Como executar
 * Clone o repositório
 * 
-(https://github.com/future4code/epps-labenu-system8)
+https://github.com/future4code/epps-labenu-system8
 
 * Instale as dependências com
 ```
