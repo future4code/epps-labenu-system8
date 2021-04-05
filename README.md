@@ -32,8 +32,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 * Dotenv
 
 ## 🚀 Como executar
-* Clone o repositório
-* 
+* Clone o repositório:
+
 https://github.com/future4code/epps-labenu-system8
 
 * Instale as dependências com
