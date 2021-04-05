@@ -11,7 +11,7 @@ const getTeacherByClass = async (req: Request, res: Response): Promise<void> => 
         SELECT 
           C.class_name,
           T.id, 
-          T.teachers_name,
+          T.teacher_name,
           T.email,
           T.birthdate,
           T.speciality

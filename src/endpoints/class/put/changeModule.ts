@@ -20,7 +20,7 @@ const changeModule = async (req: Request, res: Response): Promise<void> => {
             WHERE id = "${query.id}"
         `)
         
-        res.status(200).send('Module updated successfully.')
+        res.status(200).send({message: 'Module updated successfully.'})
         
     } catch (error) {
         console.log(error.message)

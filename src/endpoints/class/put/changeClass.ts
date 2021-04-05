@@ -12,7 +12,14 @@ const changeClass = async (req: Request,
             peapleNewClassId: req.body.peapleNewClassId
         }
 
-        //verificar se estudante existe
+        let valueRes: string = ""
+        if(body.tableName.toLowerCase() === 'teachers'){
+            valueRes = "The Teacher was insert in class successfully."
+        } 
+
+        if(body.tableName.toLowerCase() === 'students'){
+            valueRes = "The Student was insert in class successfully."
+        }
 
         if(body.tableName !== 'Teachers' && body.tableName !== 'Students'){
             errorCode = 422
@@ -28,7 +35,7 @@ const changeClass = async (req: Request,
             throw new Error('Invalid talbleName parameter.')
         } else {
             await updateClassStudant(body.peapleClassId, body.peapleNewClassId, body.tableName)
-            res.status(200).end(`${body.tableName} updated successfully`)
+            res.status(200).send({message: String(valueRes)})
         }
 
     } catch (error) {

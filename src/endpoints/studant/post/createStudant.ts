@@ -25,7 +25,7 @@ const createStudant = async (
                 "${req.body.hobbies}"                 
             )`)
 
-        res.status(201).send('Estudante criado com sucesso!')
+        res.status(201).send({message: 'Estudante criado com sucesso!'})
         
     } catch (error) {
         res.status(500).send(error.message)

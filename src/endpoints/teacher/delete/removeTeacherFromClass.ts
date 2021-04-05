@@ -13,7 +13,7 @@ const removeTeacherFromClass = async (req: Request, res: Response): Promise<void
             WHERE id = "${id}"
         `)
         
-        res.status(200).send('Teacher removed successfully.')
+        res.status(200).send({message: 'Teacher removed successfully.'})
         
     } catch (error) {
         console.log(error.message)

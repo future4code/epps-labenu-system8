@@ -11,14 +11,14 @@ const createClass = async (
         let nameClass = req.body.name
         if (req.body.type_class === 'Noturna') {
             if (!req.body.name.includes('-na-night')) {
-                throw new Error('Nomes de turmas noturnas precisam terminar com -na-nigth.')
+                throw new Error('Nomes de turmas noturnas precisam terminar com -na-night.')
             } else {
                 nameClass = req.body.name
             }
         }
 
         await connection.raw(
-            `INSERT INTO Class (id, name, start_date, end_date, type_class)
+            `INSERT INTO Class (id, class_name, start_date, end_date, type_class)
             VALUES(
                 "${Date.now()}",
                 "${nameClass}",
@@ -28,7 +28,7 @@ const createClass = async (
             )`
         )
 
-        res.status(201).send('Turma criada com sucesso!')
+        res.status(201).send({message: 'Turma criada com sucesso!'})
 
 
     } catch (error) {
