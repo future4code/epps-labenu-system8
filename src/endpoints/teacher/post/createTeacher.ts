@@ -20,7 +20,7 @@ const createTeacher = async (
                 "${req.body.speciality}"                
             )`)
 
-        res.status(201).send('Professor criado com sucesso!')
+        res.status(201).send({message: 'Professor criado com sucesso!'})
         
     } catch (error) {
         if(error.message.includes('speciality')){

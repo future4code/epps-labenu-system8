@@ -13,7 +13,7 @@ const removeStudent = async (req: Request, res: Response): Promise<void> => {
             WHERE id = "${id}"
         `)
         
-        res.status(200).send('Student removed successfully.')
+        res.status(200).send({message: 'Student removed successfully.'})
         
     } catch (error) {
         console.log(error.message)

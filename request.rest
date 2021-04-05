@@ -14,10 +14,10 @@ POST http://localhost:3003/class/create
 Content-Type: application/json
 
 {
-    "name":"Turma IPA",
-    "start_date":"2021-06-01",
-    "end_date":"2022-12-01",
-    "type_class": "Integral"
+    "name":"Turma Neil-na-night.",
+    "start_date":"2022-03-01",
+    "end_date":"2022-09-01",
+    "type_class": "Noturna"
 }
 
 ###
@@ -25,10 +25,10 @@ POST http://localhost:3003/teacher/create
 Content-Type: application/json
 
 {
-    "name":"Caio",
-    "email":"Caio@gmail.com",
-    "birthdate":"1950-04-15",
-    "speciality": "React"
+    "name":"Neil",
+    "email":"Neil@gmail.com",
+    "birthdate":"1970-04-15",
+    "speciality": "Redux"
 }
 
 ### 
@@ -36,9 +36,9 @@ PUT http://localhost:3003/update/class
 Content-Type: application/json
 
 {
-    "tableName": "Teachers",
-    "peapleClassId": "1617546212494",
-    "peapleNewClassId": "1617547014022"
+    "tableName": "Students",
+    "peapleClassId": "1617566013084",
+    "peapleNewClassId": "1617619560126"
 }
 
 ###
@@ -54,13 +54,13 @@ GET http://localhost:3003/search/age?id=1617546212494&&tableName=teachers
 GET http://localhost:3003/students/hobbies
 
 ###
-DELETE http://localhost:3003/student/remove-class/:id
+PUT http://localhost:3003/class/change-module?id=1617547014022&&module=1
+
+###
+DELETE http://localhost:3003/student/remove-class/1617566013084
 
 ###
 DELETE http://localhost:3003/teacher/remove-class/:id
-
-###
-PUT http://localhost:3003/class/change-module?id=1617547014022&&module=1
 
 ###
 DELETE http://localhost:3003/student/remove/1617312546437
