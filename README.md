@@ -61,5 +61,5 @@ npm run dev
  ```
  
  ## Desenvolvido por:
- - [Bruno Vallim]
+ - Bruno Vallim
  - [Daniel Ribeiro](https://www.linkedin.com/in/daniel-ribeiro-59b739140/)
