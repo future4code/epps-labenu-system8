@@ -49,7 +49,7 @@ touch .env
 DB_HOST = Coloque aqui seu endereço do banco de dados
 DB_USER = Coloque aqui seu usuário
 DB_PASSWORD = Coloque aqui sua senha
-DB_SCHEMA = Coloque aqui o nome do banco de dados 
+DB_NAME = Coloque aqui o nome do banco de dados 
  ```
 * Crie as tabelas com
  ```
