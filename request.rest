@@ -1,0 +1,66 @@
+###
+POST http://localhost:3003/student/create
+Content-Type: application/json
+
+{
+    "name":"Daniel",
+    "email":"daniel@gmail.com",
+    "birthdate":"1993-05-19",
+    "hobbies": "Patinar."
+}
+
+####
+POST http://localhost:3003/class/create
+Content-Type: application/json
+
+{
+    "name":"Turma Neil-na-night.",
+    "start_date":"2022-03-01",
+    "end_date":"2022-09-01",
+    "type_class": "Noturna"
+}
+
+###
+POST http://localhost:3003/teacher/create
+Content-Type: application/json
+
+{
+    "name":"Neil",
+    "email":"Neil@gmail.com",
+    "birthdate":"1970-04-15",
+    "speciality": "Redux"
+}
+
+### 
+PUT http://localhost:3003/update/class
+Content-Type: application/json
+
+{
+    "tableName": "Students",
+    "peapleClassId": "1617566013084",
+    "peapleNewClassId": "1617619560126"
+}
+
+###
+GET http://localhost:3003/students/1617547014022
+
+###
+GET http://localhost:3003/teachers/1617547014022
+
+###
+GET http://localhost:3003/search/age?id=1617546212494&&tableName=teachers
+
+###
+GET http://localhost:3003/students/hobbies
+
+###
+PUT http://localhost:3003/class/change-module?id=1617547014022&&module=1
+
+###
+DELETE http://localhost:3003/student/remove-class/1617566013084
+
+###
+DELETE http://localhost:3003/teacher/remove-class/:id
+
+###
+DELETE http://localhost:3003/student/remove/1617312546437
